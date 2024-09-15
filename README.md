@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+</head>
+<body>
+    <h1>Guess The number</h1>
+    <h2>Description</h2>
+    <h3>
+       The game is to choose random from user and checks whether the choosen number is choosen my the computer.<br>
+       Score will be decreased by each wrong guessing.
+       All the best.......!
+    </h3>
+    <input id="i">
+    <button type="submit" onclick="check()">Check</button>
+    <h4 id="result">You Are Right/Wrong</h4>
+    <p id="s">Score:10</p>
+<script>
+    function check(){
+     var i=document.getElementById("i");
+     var r=Math.floor(Math.random()*10)+1;
+     var ts=document.getElementById("s");
+     var result=document.getElementById("result");
+     var s=10;
+     var e=i.value;
+     if(r==e){
+     result.textContent="Right"
+    alert("Congratulations....U Guessed Correctly...!");
+    }
+    else{
+     s=s-1;
+     ts.textContent="Score"+s;
+result.textContent="Wrong";
+alert("Come on..Try again!");
+    }}
+</script>
+</body>
+</html>
